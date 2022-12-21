@@ -32,4 +32,4 @@ spec:
   icon:
     - url: 
       mediatype: ""
-  chaosexpcrdlink: https://raw.githubusercontent.com/litmuschaos/chaos-charts/master/charts/sample_category/sample_exec_chaos/experiment.yaml
+  chaosexpcrdlink: https://raw.githubusercontent.com/Divyesh16/chaos-charts/master/experiments/sample-category/sample-exec-chaos/experiment.yaml
