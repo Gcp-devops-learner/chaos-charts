@@ -15,7 +15,7 @@ spec:
   # It can be delete/retain
   jobCleanUpPolicy: 'delete'
   experiments:
-    - name: sample_exec_chaos
+    - name: sample-exec-chaos
       spec:
         components:
           env:
