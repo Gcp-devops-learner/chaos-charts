@@ -27,9 +27,9 @@ spec:
             - name: CHAOS_INTERVAL
               value: '10'
 
-            - name: CHAOS_INJECT_COMMAND
-              value: 'test'
+            # - name: CHAOS_INJECT_COMMAND
+            #   value: 'test'
 
-            - name: LIB
-              value: ''
+            # - name: LIB
+            #   value: ''
               
