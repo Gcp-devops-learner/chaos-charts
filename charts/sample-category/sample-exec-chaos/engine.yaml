@@ -30,6 +30,6 @@ spec:
             - name: CHAOS_INJECT_COMMAND
               value: 'test'
 
-            # - name: LIB
-            #   value: ''
+            - name: LIB
+              value: ''
               
