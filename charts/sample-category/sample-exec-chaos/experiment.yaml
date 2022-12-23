@@ -48,13 +48,13 @@ spec:
     env:
 
     - name: TOTAL_CHAOS_DURATION
-      value: '' 
+      value: '30' 
 
     - name: CHAOS_INTERVAL
-      value: ''
+      value: '10'
 
     - name: LIB
-      value: ''
+      value: 'litmus'
 
     - name: RAMP_TIME
       value: ''
