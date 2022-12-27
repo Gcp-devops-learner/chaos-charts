@@ -30,4 +30,10 @@ spec:
               value: 'md5sum /dev/zero'
             - name: CHAOS_KILL_COMMAND
               value: "kill $(find /proc -name exe -lname '*/md5sum' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}')"
+            - name: APP_LABEL
+              value: 'app=nginx'
+            - name: APP_NAMESPACE
+              value: 'default'
+            - name: APP_KIND
+              value: 'deployment'
               
