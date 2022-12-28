@@ -19,21 +19,22 @@ spec:
       spec:
         components:
           env:
-            # set chaos duration (in sec) as desired
             - name: TOTAL_CHAOS_DURATION
-              value: '300'
+              value: '60' # in seconds
 
-            # set chaos interval (in sec) as desired
-            - name: CHAOS_INTERVAL
-              value: '10'
-            - name: CHAOS_INJECT_COMMAND
-              value: 'md5sum /dev/zero'
-            - name: CHAOS_KILL_COMMAND
-              value: "kill $(find /proc -name exe -lname '*/md5sum' 2>&1 | grep -v 'Permission denied' | awk -F/ '{print $(NF-1)}')"
-            - name: APP_LABEL
-              value: 'app=nginx'
-            - name: APP_NAMESPACE
-              value: 'default'
-            - name: APP_KIND
-              value: 'deployment'
+            - name: CPU_CORES
+              value: '1'    
+
+            ## Percentage of total pods to target
+            - name: PODS_AFFECTED_PERC
+              value: ''   
+
+            ## provide the cluster runtime
+            - name: CONTAINER_RUNTIME
+              value: 'docker'        
+
+            # provide the socket file path
+            - name: SOCKET_PATH
+              value: '/var/run/docker.sock'    
+
               
