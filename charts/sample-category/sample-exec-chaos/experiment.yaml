@@ -38,15 +38,14 @@ spec:
           - "update" 
           - "delete" 
           - "deletecollection" 
-    image: "aryad/litmusctl:pyrunner"
+    image: "aryad/go-runner:ci"
     imagePullPolicy: Always
     args:
     - -c
-    - python3 -u experiment -n chaos
+    - ./experiments -name sample-exec-chaos
     command:
     - /bin/bash
     env:
-
     - name: TOTAL_CHAOS_DURATION
       value: '30' 
 
