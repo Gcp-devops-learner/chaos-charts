@@ -69,7 +69,7 @@ spec:
     ## it defines the sequence of chaos execution for multiple target pods
     ## supported values: serial, parallel
     - name: SEQUENCE
-      value: 'parallel'  
+      value: 'serail'  
       
     labels:
       name: hello-world-chaos
