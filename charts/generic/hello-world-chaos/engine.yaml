@@ -26,5 +26,3 @@ spec:
             # set chaos interval (in sec) as desired
             - name: CHAOS_INTERVAL
               value: '10'
-            - name: TargetPods
-              value: 'nginx-8f458dc5b-5trpq'
