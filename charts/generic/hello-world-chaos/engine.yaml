@@ -10,7 +10,6 @@ spec:
   # It can be active/stop
   engineState: 'active'
   #ex. values: ns1:name=percona,ns2:run=nginx
-  auxiliaryAppInfo: 'default:app=nginx'
   chaosServiceAccount: hello-world-chaos-sa
   # It can be delete/retain
   jobCleanUpPolicy: 'delete'
@@ -27,4 +26,11 @@ spec:
             - name: CHAOS_INTERVAL
               value: '10'
             - name: TARGET_PODS
+              value: ''  
+             # pod failures without '--force' & default terminationGracePeriodSeconds
+            - name: FORCE
+              value: 'false'
+
+             ## percentage of total pods to target
+            - name: PODS_AFFECTED_PERC
               value: ''  
