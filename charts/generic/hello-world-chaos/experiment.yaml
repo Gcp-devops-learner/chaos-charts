@@ -42,7 +42,7 @@ spec:
     imagePullPolicy: Always
     args:
     - -c
-    - ./experiments -name hello-world-chaos
+    - ./experiments -name pod-delete
     command:
     - /bin/bash
     env:
