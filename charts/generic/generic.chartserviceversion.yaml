@@ -11,6 +11,7 @@ spec:
     it execs inside target pods to run the chaos inject commands, waits for the chaos duration and reverts the chaos 
   experiments:
   - hello-world-chaos
+  - custom-pod-cpu-hog
   keywords: 
     - "pods" 
     - "kubernetes" 
