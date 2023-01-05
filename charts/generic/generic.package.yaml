@@ -3,3 +3,8 @@ experiments:
   - name: hello-world-chaos
     CSV: hello-world-chaos.chartserviceversion.yaml
     desc: "hello-world-chaos"
+  - name: custom-pod-cpu-hog
+    CSV: custom-pod-cpu-hog.chartserviceversion.yaml
+    desc: "custom-pod-cpu-hog"
+    
+    
