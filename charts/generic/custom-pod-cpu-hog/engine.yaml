@@ -1,0 +1,28 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: nginx-chaos
+spec:
+  appinfo:
+    appns: 'default'
+    applabel: 'app=nginx'
+    appkind: 'deployment'
+  # It can be active/stop
+  engineState: 'active'
+  auxiliaryAppInfo: ''
+  chaosServiceAccount: custom-pod-cpu-hog-sa
+  # It can be delete/retain
+  jobCleanUpPolicy: 'delete'
+  experiments:
+    - name: custom-pod-cpu-hog
+      spec:
+        components:
+          env:
+            # set chaos duration (in sec) as desired
+            - name: TOTAL_CHAOS_DURATION
+              value: '30'
+
+            # set chaos interval (in sec) as desired
+            - name: CHAOS_INTERVAL
+              value: '10'
+              
